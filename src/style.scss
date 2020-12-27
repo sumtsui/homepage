@@ -1,0 +1,62 @@
+* {
+  font-family: sans-serif;
+  line-height: 1.3em;
+  box-sizing: border-box;
+}
+
+body {
+  background: #4287f5;
+  color: white;
+}
+
+a {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: wheat;
+}
+
+.f-cen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.f-col {
+  flex-direction: column;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+header {
+  margin: 1.6em 0 2.4em;
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.main-wrap {
+  padding: 0 1em 2em;
+  .projects > div:not(:last-child) {
+    margin-bottom: 2em;
+  }
+}
+
+section:not(:last-child) {
+  margin-bottom: 2.4em;
+}
+
+@media (min-width: 600px) {
+  .main-wrap {
+    width: 60%;
+    margin: auto;
+  }
+}

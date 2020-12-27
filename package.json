@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "parcel": "^1.12.4",
+    "prettier": "^2.0.5",
+    "sass": "^1.26.8"
+  },
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --out-dir dist"
+  }
+}
