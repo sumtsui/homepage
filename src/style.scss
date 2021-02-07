@@ -1,12 +1,14 @@
-$background-color: #8f8780;
-$font-color: white;
+$background-color: white;
+$font-color: black;
+$font-size-h1: 6rem;
 
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 * {
-  font-family: "Source Sans Pro";
-  line-height: 1.3em;
+  font-family: 'Source Sans Pro';
+  line-height: 1.1em;
   box-sizing: border-box;
+  text-align: justify;
 }
 
 body {
@@ -24,12 +26,15 @@ a:hover {
   color: wheat;
 }
 
-.f-cen {
+@mixin f-cen {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.f-col {
+@mixin f-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -41,31 +46,75 @@ p {
   font-size: 1.2em;
 }
 
-header {
-  margin: 1.6em 0 2.4em;
-  h1 {
-    text-align: center;
-    margin: 0;
-  }
-  p {
-    text-align: center;
-  }
-}
-
 .main-wrap {
-  padding: 0 1em 2em;
-  .projects > div:not(:last-child) {
-    margin-bottom: 2em;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  padding: 3em 4em;
+  height: 100vh;
+  header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 15%;
+    z-index: 2;
+    h1 {
+      text-align: center;
+      font-size: $font-size-h1;
+      margin: 0;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  .left {
+    position: relative;
+    background-color: #e7e7e7;
+    float: left;
+    width: 50%;
+    height: 100%;
+    .white {
+      background-color: white;
+      height: 100%;
+      width: 30%;
+      float: right;
+    }
+    p {
+      position: absolute;
+      width: 60%;
+      top: 40%;
+      left: -10%;
+    }
+    .haochen-image {
+      width: 40%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  .right {
+    position: relative;
+    background-color: white;
+    float: right;
+    width: 50%;
+    height: 100%;
+    @include f-col;
+    p {
+      padding-top: 5em;
+    }
   }
 }
 
+.projects > div:not(:last-child) {
+  margin-bottom: 2em;
+}
 section:not(:last-child) {
   margin-bottom: 2.4em;
 }
 
-@media (min-width: 600px) {
-  .main-wrap {
-    width: 60%;
-    margin: auto;
-  }
-}
+// @media (min-width: 600px) {
+//   .main-wrap {
+//     width: 85%;
+//     margin: auto;
+//   }
+// }
