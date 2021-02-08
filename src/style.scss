@@ -143,6 +143,7 @@ p {
       float: none;
       width: 100%;
       height: 80%;
+      margin-bottom: 2em;
       @include f-col;
       .about {
         padding-top: 0;
@@ -153,7 +154,7 @@ p {
         position: relative;
         div {
           margin-right: 0;
-          margin-bottom: 0.6em;
+          margin-bottom: 0.8em;
         }
       }
     }
