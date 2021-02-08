@@ -1,6 +1,8 @@
 $background-color: white;
 $font-color: black;
-$font-size-h1: 5.5rem;
+$font-size-h1-d: 5.5rem;
+$font-size-h1-m: 1.8rem;
+$font-size-h1-800: 2.8rem;
 
 // @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
@@ -62,12 +64,9 @@ p {
     z-index: 2;
     h1 {
       text-align: center;
-      font-size: $font-size-h1;
+      font-size: $font-size-h1-d;
       margin: 0;
       font-family: 'Libre Baskerville', serif;
-    }
-    p {
-      text-align: center;
     }
   }
   .left {
@@ -115,9 +114,59 @@ p {
   }
 }
 
-// @media (min-width: 600px) {
-//   .main-wrap {
-//     width: 85%;
-//     margin: auto;
-//   }
-// }
+@media (max-width: 600px) {
+  .main-wrap {
+    padding: 0;
+    width: 100%;
+    header {
+      h1 {
+        font-size: $font-size-h1-m;
+      }
+    }
+    .left {
+      float: none;
+      width: 100%;
+      height: 80%;
+      .white {
+        display: none;
+      }
+      p {
+        left: 5%;
+        width: 70%;
+      }
+      .haochen-image {
+        width: 40%;
+      }
+    }
+    .right {
+      padding: 1em 1em;
+      float: none;
+      width: 100%;
+      height: 80%;
+      @include f-col;
+      .about {
+        padding-top: 0;
+        margin-bottom: 3em;
+      }
+      .contacts {
+        @include f-col;
+        position: relative;
+        div {
+          margin-right: 0;
+          margin-bottom: 0.6em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .main-wrap {
+    width: 100%;
+    header {
+      h1 {
+        font-size: $font-size-h1-800;
+      }
+    }
+  }
+}
