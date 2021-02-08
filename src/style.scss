@@ -1,14 +1,15 @@
 $background-color: white;
 $font-color: black;
-$font-size-h1: 6rem;
+$font-size-h1: 5.5rem;
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Oxygen&display=swap');
 
 * {
-  font-family: 'Source Sans Pro';
+  font-family: 'Oxygen', sans-serif;
   line-height: 1.1em;
   box-sizing: border-box;
-  text-align: justify;
 }
 
 body {
@@ -23,7 +24,7 @@ a:visited {
   color: $font-color;
 }
 a:hover {
-  color: wheat;
+  color: rgb(92, 91, 89);
 }
 
 @mixin f-cen {
@@ -63,6 +64,7 @@ p {
       text-align: center;
       font-size: $font-size-h1;
       margin: 0;
+      font-family: 'Libre Baskerville', serif;
     }
     p {
       text-align: center;
@@ -84,7 +86,7 @@ p {
       position: absolute;
       width: 60%;
       top: 40%;
-      left: -10%;
+      left: -8%;
     }
     .haochen-image {
       width: 40%;
@@ -99,17 +101,18 @@ p {
     width: 50%;
     height: 100%;
     @include f-col;
-    p {
+    .about {
       padding-top: 5em;
     }
+    .contacts {
+      position: absolute;
+      bottom: 0;
+      @include f-cen;
+      div {
+        margin-right: 2em;
+      }
+    }
   }
-}
-
-.projects > div:not(:last-child) {
-  margin-bottom: 2em;
-}
-section:not(:last-child) {
-  margin-bottom: 2.4em;
 }
 
 // @media (min-width: 600px) {
